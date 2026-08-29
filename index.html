@@ -1,75 +1,1515 @@
-<!DOCTYPE html><html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CS Executive Results</title><style>
-body{
-font-family:Arial,sans-serif;
-background:#f5f5f5;
-padding:20px;
-}
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  
+<title>June 2026 Examination Results</title>  
+  
+<style>  
+  
+* {  
+    box-sizing: border-box;  
+}  
+  
+html,  
+body {  
+    margin: 0;  
+    padding: 0;  
+    font-family: Arial, Helvetica, sans-serif;  
+    background: #eeeeee;  
+    color: #222;  
+}  
+  
+.portal {  
+    width: 100%;  
+    max-width: 1050px;  
+    margin: auto;  
+    background: white;  
+    min-height: 100vh;  
+}  
+  
+  
+/* =====================================================  
+   FORMAL HEADER  
+===================================================== */  
+  
+.header {  
+    min-height: 145px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    text-align: center;  
+    padding: 25px 15px;  
+    background: #ffffff;  
+    border-bottom: 1px solid #d0d0d0;  
+}  
+  
+.header-title {  
+    font-size: 31px;  
+    font-weight: 900;  
+    color: #123f78;  
+    letter-spacing: .3px;  
+    text-transform: uppercase;  
+}  
+  
+.header-subtitle {  
+    margin-top: 8px;  
+    font-size: 14px;  
+    font-weight: bold;  
+    color: #444;  
+    letter-spacing: .4px;  
+}  
+  
+.header-line {  
+    width: 280px;  
+    height: 4px;  
+    margin: 12px auto 0;  
+    background: #17639a;  
+}  
+  
+  
+/* =====================================================  
+   PLACEMENT BANNER  
+===================================================== */  
+  
+.placement-banner {  
+    background: #09699d;  
+    border-top: 2px solid #222;  
+    border-bottom: 2px solid #222;  
+    color: white;  
+    text-align: center;  
+    padding: 15px 12px;  
+    font-size: 23px;  
+    font-weight: 900;  
+    line-height: 1.35;  
+}  
+  
+.placement-banner .yellow {  
+    color: #ffd500;  
+}  
+  
+  
+/* =====================================================  
+   NAVIGATION  
+===================================================== */  
+  
+.navigation {  
+    height: 78px;  
+    background: #292929;  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    border-bottom: 7px solid #48afe0;  
+}  
+  
+.home-button {  
+    margin-left: 38px;  
+    background: #49afe0;  
+    color: white;  
+    padding: 17px 32px;  
+    border-radius: 5px;  
+    font-size: 18px;  
+    font-weight: bold;  
+    letter-spacing: .2px;  
+}  
+  
+  
+/* SOCIAL ICONS */  
+  
+.social-icons {  
+    margin-left: auto;  
+    margin-right: 25px;  
+  
+    color: white;  
+  
+    display: flex;  
+    align-items: center;  
+  
+    gap: 23px;  
+}  
+  
+.social-icons svg {  
+    width: 27px;  
+    height: 27px;  
+  
+    fill: white;  
+  
+    display: block;  
+}  
+  
+.social-icons .twitter {  
+    width: 29px;  
+    height: 29px;  
+}  
+  
+  
+/* MENU */  
+  
+.menu {  
+    background: #48afe0;  
+    height: 78px;  
+    width: 105px;  
+  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+  
+    color: white;  
+    font-size: 34px;  
+}  
+  
+  
+/* =====================================================  
+   MAIN CONTENT  
+===================================================== */  
+  
+.content {  
+    padding: 35px;  
+}  
+  
+.page-title {  
+    font-size: 37px;  
+    font-weight: 500;  
+    line-height: 1.2;  
+  
+    padding-bottom: 20px;  
+  
+    border-bottom: 2px solid #52b3df;  
+  
+    position: relative;  
+}  
+  
+.page-title::after {  
+    content: "";  
+  
+    position: absolute;  
+    left: 0;  
+    bottom: -2px;  
+  
+    height: 6px;  
+    width: 390px;  
+  
+    background: #52b3df;  
+}  
+  
+  
+/* =====================================================  
+   SEARCH PANEL  
+===================================================== */  
+  
+.search-panel {  
+    margin-top: 38px;  
+  
+    background: #9acde5;  
+  
+    padding: 48px 70px;  
+  
+    text-align: center;  
+}  
+  
+.search-heading {  
+    font-size: 29px;  
+    font-weight: 900;  
+  
+    margin-bottom: 52px;  
+}  
+  
+  
+/* =====================================================  
+   FORM  
+===================================================== */  
+  
+.exam-select {  
+    width: 78%;  
+    height: 53px;  
+  
+    padding: 8px 14px;  
+  
+    border: 1px solid #777;  
+    border-radius: 4px;  
+  
+    background: white;  
+  
+    font-size: 20px;  
+}  
+  
+.form-row {  
+    width: 100%;  
+  
+    display: flex;  
+    align-items: center;  
+  
+    margin-top: 38px;  
+}  
+  
+.form-label {  
+    width: 43%;  
+  
+    padding-right: 22px;  
+  
+    text-align: right;  
+  
+    font-size: 24px;  
+    font-weight: 900;  
+}  
+  
+.form-field {  
+    width: 57%;  
+}  
+  
+.form-field input {  
+    width: 100%;  
+  
+    height: 54px;  
+  
+    padding: 12px;  
+  
+    font-size: 20px;  
+  
+    border: 1px solid #777;  
+    border-radius: 4px;  
+  
+    outline: none;  
+}  
+  
+.form-field input:focus {  
+    border-color: #1475a7;  
+}  
+  
+.registration-help {  
+    margin-top: 9px;  
+  
+    font-size: 17px;  
+    font-style: italic;  
+}  
+  
+  
+/* =====================================================  
+   GET RESULT BUTTON  
+===================================================== */  
+  
+.result-button {  
+    margin-top: 43px;  
+  
+    padding: 14px 26px;  
+  
+    background: white;  
+  
+    border: 1px solid #777;  
+    border-radius: 4px;  
+  
+    font-size: 22px;  
+  
+    cursor: pointer;  
+}  
+  
+.result-button:hover {  
+    background: #eeeeee;  
+}  
+  
+  
+/* =====================================================  
+   RESULT PAGE  
+===================================================== */  
+  
+#resultPage {  
+    display: none;  
+}  
+  
+.session-box {  
+    border: 1px solid #777;  
+  
+    margin-top: 15px;  
+}  
+  
+.session-row {  
+    padding: 11px;  
+  
+    border-bottom: 1px solid #777;  
+  
+    font-size: 14px;  
+    font-weight: bold;  
+}  
+  
+.session-row:last-child {  
+    border-bottom: none;  
+}  
+  
+  
+/* =====================================================  
+   CANDIDATE DETAILS  
+===================================================== */  
+  
+.details-table {  
+    width: 100%;  
+  
+    border-collapse: collapse;  
+  
+    margin-top: 15px;  
+}  
+  
+.details-table td {  
+    border: 1px solid #777;  
+  
+    padding: 10px;  
+  
+    font-size: 14px;  
+    font-weight: bold;  
+}  
+  
+  
+/* =====================================================  
+   MARKS TABLE  
+===================================================== */  
+  
+.marks-table {  
+    width: 100%;  
+  
+    border-collapse: collapse;  
+}  
+  
+.marks-table th,  
+.marks-table td {  
+    border: 1px solid #777;  
+  
+    padding: 9px;  
+  
+    font-size: 13px;  
+}  
+  
+.marks-table th {  
+    text-align: left;  
+}  
+  
+.group-header {  
+    background: #eeeeee;  
+  
+    font-weight: bold;  
+}  
+  
+.subject {  
+    text-align: left;  
+  
+    line-height: 1.45;  
+}  
+  
+.marks-number {  
+    width: 80px;  
+  
+    text-align: right;  
+}  
+  
+.total-row {  
+    background: #f2f2f2;  
+  
+    font-weight: bold;  
+}  
+  
+.grand-total {  
+    border: 1px solid #777;  
+  
+    padding: 11px;  
+  
+    font-weight: bold;  
+  
+    font-size: 14px;  
+}  
+  
+  
+/* =====================================================  
+   LOWER CONTENT  
+===================================================== */  
+  
+.check-result {  
+    text-align: center;  
+  
+    margin: 25px;  
+  
+    color: #087bc1;  
+  
+    font-weight: bold;  
+}  
+  
+.instruction-heading {  
+    text-align: center;  
+  
+    color: #087bc1;  
+  
+    font-weight: bold;  
+  
+    line-height: 1.6;  
+  
+    margin: 28px;  
+}  
+  
+.undertaking {  
+    font-size: 13px;  
+  
+    line-height: 1.7;  
+}  
+  
+.undertaking p {  
+    margin: 18px 0;  
+}  
+  
+.footer {  
+    margin-top: 35px;  
+  
+    border-top: 1px solid #ccc;  
+  
+    padding: 15px;  
+  
+    text-align: center;  
+  
+    color: #777;  
+  
+    font-size: 12px;  
+}  
+  
+.back-button {  
+    display: block;  
+  
+    margin: 25px auto;  
+  
+    padding: 10px 18px;  
+  
+    background: white;  
+  
+    border: 1px solid #777;  
+  
+    border-radius: 4px;  
+  
+    cursor: pointer;  
+}  
+  
+  
+/* =====================================================  
+   MOBILE  
+===================================================== */  
+  
+@media (max-width: 600px) {  
+  
+    body {  
+        background: white;  
+    }  
+  
+    .header {  
+        min-height: 95px;  
+  
+        padding: 14px 8px;  
+    }  
+  
+    .header-title {  
+        font-size: 20px;  
+    }  
+  
+    .header-subtitle {  
+        font-size: 9px;  
+    }  
+  
+    .header-line {  
+        width: 160px;  
+        height: 3px;  
+    }  
+  
+    .placement-banner {  
+        font-size: 12px;  
+  
+        padding: 9px 5px;  
+    }  
+  
+    .navigation {  
+        height: 48px;  
+  
+        border-bottom-width: 5px;  
+    }  
+  
+    .home-button {  
+        margin-left: 12px;  
+  
+        padding: 9px 13px;  
+  
+        font-size: 11px;  
+    }  
+  
+    .social-icons {  
+        gap: 10px;  
+  
+        margin-right: 10px;  
+    }  
+  
+    .social-icons svg {  
+        width: 16px;  
+        height: 16px;  
+    }  
+  
+    .social-icons .twitter {  
+        width: 18px;  
+        height: 18px;  
+    }  
+  
+    .menu {  
+        width: 50px;  
+  
+        height: 48px;  
+  
+        font-size: 22px;  
+    }  
+  
+    .content {  
+        padding: 14px;  
+    }  
+  
+    .page-title {  
+        font-size: 19px;  
+  
+        padding-bottom: 11px;  
+    }  
+  
+    .page-title::after {  
+        width: 160px;  
+  
+        height: 5px;  
+    }  
+  
+    .search-panel {  
+        margin-top: 17px;  
+  
+        padding: 34px 14px;  
+    }  
+  
+    .search-heading {  
+        font-size: 19px;  
+  
+        margin-bottom: 32px;  
+    }  
+  
+    .exam-select {  
+        width: 100%;  
+  
+        height: 45px;  
+  
+        font-size: 14px;  
+    }  
+  
+    .form-row {  
+        display: block;  
+  
+        margin-top: 25px;  
+    }  
+  
+    .form-label {  
+        width: 100%;  
+  
+        padding: 0;  
+  
+        text-align: left;  
+  
+        font-size: 15px;  
+  
+        margin-bottom: 8px;  
+    }  
+  
+    .form-field {  
+        width: 100%;  
+    }  
+  
+    .form-field input {  
+        height: 43px;  
+  
+        font-size: 14px;  
+    }  
+  
+    .registration-help {  
+        font-size: 11px;  
+    }  
+  
+    .result-button {  
+        margin-top: 27px;  
+  
+        font-size: 16px;  
+  
+        padding: 10px 18px;  
+    }  
+  
+    .session-row {  
+        font-size: 10px;  
+  
+        padding: 8px;  
+    }  
+  
+    .details-table td {  
+        font-size: 10px;  
+  
+        padding: 8px;  
+    }  
+  
+    .marks-table th,  
+    .marks-table td {  
+        font-size: 9px;  
+  
+        padding: 5px 4px;  
+    }  
+  
+    .marks-number {  
+        width: 45px;  
+    }  
+  
+    .grand-total {  
+        font-size: 11px;  
+    }  
+  
+    .undertaking {  
+        font-size: 9px;  
+    }  
+  
+}  
+  
+  
+@media (min-width: 700px) {  
+  
+    .portal {  
+        box-shadow: 0 0 12px rgba(0,0,0,.18);  
+    }  
+  
+}  
+  
+</style>  
+  
+</head>  
+  
+  
+<body>  
+  
+  
+<div class="portal">  
+  
+  
+<!-- =====================================================  
+     SEARCH PAGE  
+===================================================== -->  
+  
+<div id="searchPage">  
+  
+  
+    <!-- HEADER -->  
+  
+    <header class="header">  
+  
+        <div>  
+  
+            <div class="header-title">  
+                CS
 
-.box{
-background:white;
-max-width:700px;
-margin:auto;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
-}
+भारतीय कम्पनी सचिव संस्थान
 
-input{
-width:95%;
-padding:10px;
-margin:10px 0;
-}
+THE INSTITUTE OF Company Secretaries of India
 
-button{
-padding:10px 20px;
-}
+IN PURSUIT OF ROESSSIONAL
 
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:15px;
-}
+Statutory body under an Act of Parliament
 
-th,td{
-border:1px solid #999;
-padding:8px;
-}
 
-th{
-background:#f0f0f0;
-}
-</style></head><body><div class="box"><h2>Company Secretaries (CS) Examination Results</h2><input id="hall" placeholder="Hall Ticket Number"><input id="dob" placeholder="DOB (DD-MM-YYYY)"><br><br>
 
-<button onclick="verify()">Verify</button>
-
-<div id="result"></div></div><script>
-
-function verify(){
-
-let hall =
-document.getElementById("hall").value.trim();
-
-let dob =
-document.getElementById("dob").value.trim();
-
-if(hall === "541571" && dob === "12-02-2004"){
-
-document.getElementById("result").innerHTML = `
-<h3 style="color:green;">✅ Verification Successful</h3>
-
-<img src="result.jpg" style="width:100%;margin-top:15px;">
-`;
-}else{
-
-document.getElementById("result").innerHTML =
-"❌ Invalid Hall Ticket Number or DOB";
-
-}
-
-}
-
-</script></body>
-</html>
+(Under the jurisdiction of Ministry of Corporate Affairs)
+            </div>  
+  
+            <div class="header-subtitle">  
+              
+           
+            </div>  
+  
+            <div class="header-line"></div>  
+  
+        </div>  
+  
+    </header>  
+  
+  
+    <!-- PLACEMENT BANNER -->  
+  
+    <div class="placement-banner">  
+  
+        <span class="yellow">  
+            For Job and Trainee Requirement  
+        </span>  
+  
+        please visit the placement portal  
+  
+    </div>  
+  
+  
+    <!-- NAVIGATION -->  
+  
+    <nav class="navigation">  
+  
+  
+        <div class="home-button">  
+  
+            ⬇ &nbsp; HOME  
+  
+        </div>  
+  
+  
+        <!-- SOCIAL ICONS -->  
+  
+        <div class="social-icons">  
+  
+  
+            <!-- FACEBOOK -->  
+  
+            <svg  
+                viewBox="0 0 24 24"  
+                aria-label="Facebook"  
+            >  
+  
+                <path d="  
+                M14 8h3V4h-3  
+                c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9  
+                c0-1 .3-1 1-1z  
+                "/>  
+  
+            </svg>  
+  
+  
+            <!-- INSTAGRAM -->  
+  
+            <svg  
+                viewBox="0 0 24 24"  
+                aria-label="Instagram"  
+            >  
+  
+                <path d="  
+                M7 2h10c2.8 0 5 2.2 5 5v10  
+                c0 2.8-2.2 5-5 5H7  
+                c-2.8 0-5-2.2-5-5V7  
+                c0-2.8 2.2-5 5-5zm0 2  
+                c-1.7 0-3 1.3-3 3v10  
+                c0 1.7 1.3 3 3 3h10  
+                c1.7 0 3-1.3 3-3V7  
+                c0-1.7-1.3-3-3-3H7zm5 3.5  
+                A4.5 4.5 0 1 1 12 16.5  
+                A4.5 4.5 0 0 1 12 7.5zm0 2  
+                A2.5 2.5 0 1 0 12 14.5  
+                A2.5 2.5 0 0 0 12 9.5zm5.5-2.2  
+                a1.1 1.1 0 1 1-1.1 1.1  
+                1.1 1.1 0 0 1 1.1-1.1z  
+                "/>  
+  
+            </svg>  
+  
+  
+            <!-- TWITTER / X -->  
+  
+            <svg  
+                class="twitter"  
+                viewBox="0 0 24 24"  
+                aria-label="Twitter"  
+            >  
+  
+                <path d="  
+                M18.9 2H22l-6.8 7.8  
+                L23.2 22h-6.3l-5-6.5  
+                L6.2 22H3.1l7.3-8.4  
+                L2.8 2h6.4l4.5 5.9  
+                L18.9 2zm-1.1 17.9h1.7  
+                L8.3 4H6.5l11.3 15.9z  
+                "/>  
+  
+            </svg>  
+  
+  
+            <!-- SEARCH -->  
+  
+            <svg  
+                viewBox="0 0 24 24"  
+                aria-label="Search"  
+            >  
+  
+                <path d="  
+                M9.5 3a6.5 6.5 0 1 0  
+                4.1 11.5l5.4 5.4  
+                1.4-1.4-5.4-5.4  
+                A6.5 6.5 0 0 0 9.5 3zm0 2  
+                a4.5 4.5 0 1 1 0 9  
+                4.5 4.5 0 0 1 0-9z  
+                "/>  
+  
+            </svg>  
+  
+  
+        </div>  
+  
+  
+        <!-- MENU -->  
+  
+        <div class="menu">  
+  
+            ☰  
+  
+        </div>  
+  
+  
+    </nav>  
+  
+  
+    <!-- MAIN CONTENT -->  
+  
+    <main class="content">  
+  
+  
+        <div class="page-title">  
+  
+            June 2026 Examination Results  
+  
+        </div>  
+  
+  
+        <!-- SEARCH PANEL -->  
+  
+        <section class="search-panel">  
+  
+  
+            <div class="search-heading">  
+  
+                Executive &amp; Professional Programme  
+                June 2026  
+  
+            </div>  
+  
+  
+            <!-- EXAMINATION -->  
+  
+            <select  
+                id="exam"  
+                class="exam-select"  
+            >  
+  
+                <option value="">  
+                    ---------- SELECT EXAMINATION ----------  
+                </option>  
+  
+                <option value="executive">  
+                    Executive Programme  
+                </option>  
+  
+                <option value="professional">  
+                    Professional Programme  
+                </option>  
+  
+            </select>  
+  
+  
+            <!-- ROLL NUMBER -->  
+  
+            <div class="form-row">  
+  
+                <div class="form-label">  
+  
+                    Enter Roll Number:  
+  
+                </div>  
+  
+                <div class="form-field">  
+  
+                    <input  
+                        id="roll"  
+                        type="text"  
+                        placeholder="Roll Number"  
+                    >  
+  
+                </div>  
+  
+            </div>  
+  
+  
+            <!-- REGISTRATION NUMBER -->  
+  
+            <div class="form-row">  
+  
+                <div class="form-label">  
+  
+                    Enter Registration No.:  
+  
+                </div>  
+  
+                <div class="form-field">  
+  
+                    <input  
+                        id="registration"  
+                        type="text"  
+                        placeholder="Registration Number"  
+                    >  
+  
+                    <div class="registration-help">  
+  
+                        Enter your Registration Number  
+  
+                    </div>  
+  
+                </div>  
+  
+            </div>  
+  
+  
+            <!-- GET RESULT -->  
+  
+            <button  
+                class="result-button"  
+                type="button"  
+                onclick="showResult()"  
+            >  
+  
+                GET RESULT  
+  
+            </button>  
+  
+  
+        </section>  
+  
+    </main>  
+  
+</div>  
+  
+  
+<!-- =====================================================  
+     RESULT PAGE  
+===================================================== -->  
+  
+<div id="resultPage">  
+  
+  
+    <main class="content">  
+  
+  
+        <div class="page-title">  
+  
+            June 2026 Examination Results  
+  
+        </div>  
+  
+  
+        <!-- SESSION -->  
+  
+        <div class="session-box">  
+  
+            <div class="session-row">  
+  
+                Examination Session : JUNE 2026  
+  
+            </div>  
+  
+  
+            <div  
+                class="session-row"  
+                id="resultExam"  
+            >  
+  
+                Exam : Executive Programme  
+  
+            </div>  
+  
+        </div>  
+  
+  
+        <!-- CANDIDATE DETAILS -->  
+  
+        <table class="details-table">  
+  
+            <tr>  
+  
+                <td>  
+  
+                    Name : MANDALA RUSHITHA  
+  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td>  
+  
+                    Roll Number :  
+                    <span id="displayRoll"></span>  
+  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td>  
+  
+                    Registration No :  
+                    <span id="displayRegistration"></span>  
+  
+                </td>  
+  
+            </tr>  
+  
+        </table>  
+  
+  
+        <!-- =================================================  
+             GROUP 1  
+        ================================================== -->  
+  
+        <table class="marks-table">  
+  
+  
+            <tr>  
+  
+                <td  
+                    colspan="2"  
+                    class="group-header"  
+                >  
+  
+                    Group - 1  
+                    &nbsp;&nbsp;  
+                    Result : FAIL  
+  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <th>  
+                    Subject  
+                </th>  
+  
+                <th class="marks-number">  
+                    Marks  
+                </th>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Jurisprudence, Interpretation and  
+                    General Laws  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    29  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Company Law and Practice  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    32  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Setting Up of Business, Industrial and  
+                    Labour Laws  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    58  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Corporate Accounting and Financial  
+                    Management  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    20  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr class="total-row">  
+  
+                <td>  
+                    Total  
+                </td>  
+  
+                <td class="marks-number">  
+                    139  
+                </td>  
+  
+            </tr>  
+  
+  
+            <!-- =================================================  
+                 GROUP 2  
+            ================================================== -->  
+  
+            <tr>  
+  
+                <td  
+                    colspan="2"  
+                    class="group-header"  
+                >  
+  
+                    Group - 2  
+                    &nbsp;&nbsp;  
+                    Result : FAIL  
+  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <th>  
+                    Subject  
+                </th>  
+  
+                <th class="marks-number">  
+                    Marks  
+                </th>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Capital Market and Securities Laws  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    28  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Economic, Commercial and Intellectual  
+                    Property Laws  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    74 (E)  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr>  
+  
+                <td class="subject">  
+  
+                    Tax Laws and Practice  
+  
+                </td>  
+  
+                <td class="marks-number">  
+                    46  
+                </td>  
+  
+            </tr>  
+  
+  
+            <tr class="total-row">  
+  
+                <td>  
+                    Total  
+                </td>  
+  
+                <td class="marks-number">  
+                    148  
+                </td>  
+  
+            </tr>  
+  
+  
+        </table>  
+  
+  
+        <!-- GRAND TOTAL -->  
+  
+        <div class="grand-total">  
+  
+            Grand Total : 287  
+  
+        </div>  
+  
+  
+        <!-- CHECK RESULT -->  
+  
+        <div class="check-result">  
+  
+  
+        </div>  
+  
+  
+        <!-- INFORMATION -->  
+  
+        <div class="instruction-heading">  
+  
+            EXAMINATION INFORMATION  
+  
+            <br>  
+  
+  The symbol ‘E’ denotes exemption granted to the candidate in the respective paper.
+  
+            PLEASE READ THE INSTRUCTIONS GIVEN BELOW  
+  
+        </div>  
+  
+  
+        <div class="undertaking">  
+  
+            <strong>  
+                UNDERTAKING:  
+            </strong>  
+  
+  
+            <p>  
+  
+                The candidate should verify all particulars  
+                entered before proceeding.  
+  
+            </p>  
+  
+  
+            <p>  
+  
+                (i) Examination information should only be  
+                accessed for the relevant candidate.  
+  
+            </p>  
+  
+  
+            <p>  
+  
+                (ii) The information displayed should not be  
+                altered, modified, distributed or  
+                misrepresented.  
+  
+            </p>  
+  
+  
+            <p>  
+  
+                (iii) Candidates should retain their  
+                examination credentials securely.  
+  
+            </p>  
+  
+  
+            <p>  
+  
+                (iv) Examination information should be  
+                verified through the appropriate examination  
+                authority where applicable.  
+  
+            </p>  
+  
+        </div>  
+  
+  
+        <div class="footer">  
+  
+            ICSI CS Executive June 2026 Examination Results 
+  
+        </div>  
+  
+  
+        <button  
+            class="back-button"  
+            type="button"  
+            onclick="showSearch()"  
+        >  
+  
+            BACK TO RESULT SEARCH  
+  
+        </button>  
+  
+  
+    </main>  
+  
+</div>  
+  
+  
+</div>  
+  
+  
+<!-- =====================================================  
+     JAVASCRIPT  
+===================================================== -->  
+  
+<script>  
+  
+  
+function showResult() {  
+  
+  
+    const exam =  
+        document.getElementById("exam").value;  
+  
+  
+    const roll =  
+        document.getElementById("roll").value.trim();  
+  
+  
+    const registration =  
+        document  
+        .getElementById("registration")  
+        .value  
+        .trim();  
+  
+  
+    /* EXAMINATION VALIDATION */  
+  
+    if (exam === "") {  
+  
+        alert("Please select an examination.");  
+  
+        return;  
+  
+    }  
+  
+  
+    /* ROLL NUMBER VALIDATION */  
+  
+    if (roll === "") {  
+  
+        alert("Please enter Roll Number.");  
+  
+        return;  
+  
+    }  
+  
+  
+    /* REGISTRATION VALIDATION */  
+  
+    if (registration === "") {  
+  
+        alert("Please enter Registration Number.");  
+  
+        return;  
+  
+    }  
+  
+  
+    /* DISPLAY ROLL */  
+  
+    document  
+        .getElementById("displayRoll")  
+        .textContent = roll;  
+  
+  
+    /* DISPLAY REGISTRATION */  
+  
+    document  
+        .getElementById("displayRegistration")  
+        .textContent = registration;  
+  
+  
+    /* DISPLAY EXAMINATION */  
+  
+    if (exam === "professional") {  
+  
+        document  
+            .getElementById("resultExam")  
+            .textContent =  
+            "Exam : Professional Programme";  
+  
+    }  
+  
+    else {  
+  
+        document  
+            .getElementById("resultExam")  
+            .textContent =  
+            "Exam : Executive Programme";  
+  
+    }  
+  
+  
+    /* HIDE SEARCH */  
+  
+    document  
+        .getElementById("searchPage")  
+        .style.display = "none";  
+  
+  
+    /* SHOW RESULT */  
+  
+    document  
+        .getElementById("resultPage")  
+        .style.display = "block";  
+  
+  
+    /* SCROLL TO TOP */  
+  
+    window.scrollTo(0, 0);  
+  
+}  
+  
+  
+  
+function showSearch() {  
+  
+  
+    /* HIDE RESULT */  
+  
+    document  
+        .getElementById("resultPage")  
+        .style.display = "none";  
+  
+  
+    /* SHOW SEARCH */  
+  
+    document  
+        .getElementById("searchPage")  
+        .style.display = "block";  
+  
+  
+    /* SCROLL TO TOP */  
+  
+    window.scrollTo(0, 0);  
+  
+}  
+  
+  
+</script>  
+  
+  
+</body>  
+  
+</html>  
